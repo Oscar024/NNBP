@@ -27,12 +27,12 @@ from keras.layers import Dense
 model = Sequential()
 
 # Add an input layer
-model.add(Dense(12, activation='sigmoid', input_shape=(7,)))
+model.add(Dense(32, activation='sigmoid', input_shape=(7,)))
 
 # Add one hidden layer
-model.add(Dense(8, activation='sigmoid'))
+model.add(Dense(64, activation='sigmoid'))
 
-model.add(Dense(32, activation='sigmoid'))
+model.add(Dense(7, activation='sigmoid'))
 
 
 
@@ -57,7 +57,7 @@ model.compile(loss='mean_squared_error',
               optimizer='adam',
               metrics=['accuracy'])
 
-model.fit(X_train, y_train, epochs=200, batch_size=10, verbose=1)
+model.fit(X_train, y_train, epochs=20000, batch_size=10, verbose=1)
 
 
 
@@ -65,5 +65,5 @@ y_pred = model.predict(X_test)
 
 model.save('modelBP.h5')  # creates a HDF5 file 'my_model.h5'
 
-print(y_pred)
+#print(y_pred)
 print("end")
