@@ -9,9 +9,9 @@ datos = pd.read_csv("pacientestrain.csv", sep=',')
 dataset = np.array(datos)
 
 
-X_train = dataset[0:500,0:8]
+X_train = dataset[0:500,0:7]
 y_train = dataset[0:500,7:8]
-X_test = dataset[0:500,0:8]
+X_test = dataset[0:500,0:7]
 print(dataset.shape)
 print(X_train.shape)
 print(y_train.shape)
@@ -27,7 +27,7 @@ from keras.layers import Dense
 model = Sequential()
 
 # Add an input layer
-model.add(Dense(12, activation='sigmoid', input_shape=(8,)))
+model.add(Dense(12, activation='sigmoid', input_shape=(7,)))
 
 # Add one hidden layer
 model.add(Dense(8, activation='sigmoid'))
@@ -57,7 +57,7 @@ model.compile(loss='mean_squared_error',
               optimizer='adam',
               metrics=['accuracy'])
 
-model.fit(X_train, y_train, epochs=20000, batch_size=10, verbose=1)
+model.fit(X_train, y_train, epochs=200, batch_size=10, verbose=1)
 
 
 
