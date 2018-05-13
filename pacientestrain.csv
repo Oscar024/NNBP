@@ -1,4 +1,4 @@
-Edad,Sexo,BMI,Diastolica,Siastolica,Fuma,Padres,Target
+Edad,Sexo,BMI,Siastolica,Diastolica,Fuma,Padres,Target
 75,0,118.888401,59,79,0,1,0.14725342
 26,0,35.14397147,84,80,0,2,0.009380565
 100,0,33.85977186,56,75,1,2,0.018847133

@@ -7,8 +7,8 @@ model = load_model('modelBP.h5')
 edad = 60
 sexo = 0
 bmi = 133.3
-dia = 132
-sys = 54
+dia = 54
+sys = 132
 fuma = 1
 padres =1
 
@@ -20,7 +20,7 @@ risk = target*100
 print(risk)
 
 
-X_test = np.array([[edad,sexo,bmi,dia,sys,fuma,padres]])
+X_test = np.array([[edad,sexo,bmi,sys,dia,fuma,padres]])
 y_test = np.array([[target]])
 print(X_test.shape)
 yp= model.predict(X_test)
