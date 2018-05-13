@@ -5,12 +5,12 @@ import math
 model = load_model('modelBP.h5')
 
 edad = 60
-sexo = 0
-bmi = 133.3
-dia = 54
-sys = 132
+sexo = 1
+bmi = 32
+sys = 128
+dia = 85
 fuma = 1
-padres =1
+padres =2
 
 
 
