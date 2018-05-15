@@ -57,7 +57,7 @@ model.compile(loss='mean_squared_error',
               optimizer='adam',
               metrics=['accuracy'])
 
-model.fit(X_train, y_train, epochs=20000, batch_size=10, verbose=1)
+model.fit(X_train, y_train, epochs=200000, batch_size=10, verbose=1)
 
 
 
