@@ -7,13 +7,13 @@ import numpy as np
 model = load_model('modelBP.h5')
 
 # Read in white wine data
-datos = pd.read_csv("pacientesreal.csv", sep=',')
+datos = pd.read_csv("pacientestrain.csv", sep=',')
 
 
 dataset = np.array(datos)
 
-y_test = dataset[0:14,7:8]
-X_test = dataset[0:14,0:7]
+y_test = dataset[0:500,7:8]
+X_test = dataset[0:500,0:7]
 print(dataset.shape)
 print(X_test.shape)
 print(y_test.shape)
