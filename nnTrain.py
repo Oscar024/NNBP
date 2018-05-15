@@ -7,11 +7,11 @@ datos = pd.read_csv("pacientestrain.csv", sep=',')
 
 
 dataset = np.array(datos)
+datos=500
 
-
-X_train = dataset[0:500,0:7]
-y_train = dataset[0:500,7:8]
-X_test = dataset[0:500,0:7]
+X_train = dataset[0:datos,0:7]
+y_train = dataset[0:datos,7:8]
+X_test = dataset[0:datos,0:7]
 print(dataset.shape)
 print(X_train.shape)
 print(y_train.shape)
